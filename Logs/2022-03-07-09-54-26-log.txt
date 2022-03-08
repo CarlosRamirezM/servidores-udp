@@ -1,0 +1,5 @@
+INFO:root:LOG INICIADO
+INFO:root:Conexion hecha para cliente 1
+INFO:root:Conexion hecha para cliente 2
+INFO:root:Conexion hecha para cliente 3
+INFO:root:Conexion hecha para cliente 4
