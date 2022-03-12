@@ -4,6 +4,7 @@ import socket
 import logging
 import os
 import stopwatch as sw
+import hashlib
 
 LISTO = 'LISTO'
 ULTIMO_PAQUETE = 'ULTIMO_PAQUETE'
@@ -21,6 +22,7 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
         print("Conexión no exitosa. Vuelva a intentarlo.")
     try:
         while True:
+            client_socket.send(f'{numero_cliente}'.encode('utf-8'))
             listo = input(
                 f"¿Está listo para recibir el archivo cliente {numero_cliente}? Escriba 's' si lo está y algo más de lo contrario: ")
 
@@ -36,17 +38,20 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
                     if primero:
                         ti = sw.start()
                         primero = False
-                    if not chunk:
-                        break
+                    try:
+                        if chunk.decode('utf-8') == 'DONE':
+                            break
+                    except:
+                        pass
                     archivo.write(chunk)
                 tf = sw.end()
+                archivo.close()
                 client_socket.send(ULTIMO_PAQUETE.encode('utf-8'))
 
                 hash_recibido = client_socket.recv(TAMANIO_CHUNK)
-                hash_valido = validar_hash(archivo, hash_recibido)
+                hash_valido = validar_hash(nombre_archivo, hash_recibido)
 
                 if hash_valido:
-                    archivo.close()
                     print("El archivo se ha recibido satisfactoriamente.")
                     tamanio = os.path.getsize(nombre_archivo)
                     tiempo = sw.dar_duracion(ti, tf)
@@ -56,7 +61,6 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
                                   \n {tiempo}")
 
                 else:
-                    archivo.close()
                     os.remove(nombre_archivo)
                     print("¡El archivo ha sido alterado!")
                     logging.info(
@@ -68,4 +72,6 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
 
 
 def validar_hash(archivo, hash_recibido) -> bool:
-    pass
+    with open(archivo,"rb") as f:
+        calculado = hashlib.sha256(f.read()).digest()
+        return calculado == hash_recibido

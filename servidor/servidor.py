@@ -7,7 +7,6 @@ import stopwatch as sw
 import socket
 from stat import filemode
 import threading
-from tkinter import SEPARATOR
 import logging
 from datetime import datetime
 import os
@@ -20,22 +19,23 @@ def process_thread(filename, client_socket, barrier, hash):
     try:
         while True:
             num_client = client_socket.recv(1024).decode('utf-8')
-            print('Num client',num_client)
+            print('Num. cliente',num_client)
             request = client_socket.recv(1024)
             if not request or request.decode('utf-8') == 'END':
                 break
 
             str_req = request.decode("utf-8").split(' ')
-            print(f"received {str_req} from client")
+            print(f"Recibido {str_req} del cliente")
             if str_req[0] == 'LISTO':
                 barrier.wait()   
     
-            print('mandando archivo',filename)
+            print('Enviando archivo',filename)
             ti = sw.start()
             with open(filename,"rb") as f:
                 while True:
                     bytes_read = f.read(1024)
                     if not bytes_read:
+                        print('Último chunk')
                         break
                     client_socket.sendall(bytes_read)
             client_socket.send('DONE'.encode('utf-8'))
@@ -58,7 +58,7 @@ def process_thread(filename, client_socket, barrier, hash):
 
 while True:
     readyCount = 0
-    num_clients , file = [int(x) for x in input("Ingrese el numero de clientes y el archivo (ej: 5 100)").split()]
+    num_clients , file = [int(x) for x in input().split()]
     selectedFile = f'servidor/files/{file}.bin'
     barrier = threading.Barrier(num_clients)
 
@@ -72,7 +72,6 @@ while True:
     with open(selectedFile,"rb") as f:
         bytes = f.read() # read entire file as bytes
         hash = hashlib.sha256(bytes).digest()
-        print(hash)
 
     for i in range(num_clients):
         print("Esperando conexiones")
