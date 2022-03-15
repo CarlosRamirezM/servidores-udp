@@ -8,14 +8,17 @@ import hashlib
 
 LISTO = 'LISTO'
 ULTIMO_PAQUETE = 'ULTIMO_PAQUETE'
-TAMANIO_CHUNK = 1024
+TAMANIO_CHUNK = 4096
+
+ip = '192.168.180.4'
+#ip = '127.0.0.1'
 
 
 def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         # Cambiar al puerto 20 en produccion
-        client_socket.connect(('127.0.0.1', 12345))
+        client_socket.connect((ip, 12345))
         print(f"Conexión exitosa cliente {numero_cliente}")
         logging.info(f"Conexión hecha para cliente {numero_cliente}")
     except:
@@ -33,19 +36,23 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
                 archivo = open(nombre_archivo, "wb+")
 
                 primero = True
+                chunk = client_socket.recv(TAMANIO_CHUNK)
                 while True:
-                    chunk = client_socket.recv(TAMANIO_CHUNK)
+
+                    try:
+                        if chunk.decode('utf-8') == 'DONE':
+                            print("Se recibe un DONE")
+                            break
+                    except:
+                        archivo.write(chunk)
+
                     if primero:
                         ti = sw.start()
                         primero = False
-                    try:
-                        if chunk.decode('utf-8') == 'DONE':
-                            break
-                    except:
-                        pass
-                    archivo.write(chunk)
+                    chunk = client_socket.recv(TAMANIO_CHUNK)
                 tf = sw.end()
                 archivo.close()
+
                 client_socket.send(ULTIMO_PAQUETE.encode('utf-8'))
 
                 hash_recibido = client_socket.recv(TAMANIO_CHUNK)
@@ -59,7 +66,7 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
                                   \n Se recibió el archivo: {nombre_archivo} de tamaño: {tamanio} bytes \
                                   \n Recibido por el cliente {numero_cliente} \
                                   \n {tiempo}")
-
+                    break
                 else:
                     os.remove(nombre_archivo)
                     print("¡El archivo ha sido alterado!")
@@ -72,6 +79,6 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
 
 
 def validar_hash(archivo, hash_recibido) -> bool:
-    with open(archivo,"rb") as f:
+    with open(archivo, "rb") as f:
         calculado = hashlib.sha256(f.read()).digest()
         return calculado == hash_recibido

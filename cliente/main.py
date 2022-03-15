@@ -1,6 +1,8 @@
+from multiprocessing.connection import wait
 import threading
 import logging
 from datetime import datetime
+from time import time, sleep
 from cliente import crear_conexion
 
 now = datetime.now()  # current date and time
@@ -16,3 +18,4 @@ for i in range(1, num_conexiones+1):
     cliente = threading.Thread(
         target=crear_conexion, args=(i, num_conexiones,))
     cliente.start()
+    sleep(0.2)
