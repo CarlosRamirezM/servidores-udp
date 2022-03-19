@@ -10,7 +10,7 @@ LISTO = 'LISTO'
 ULTIMO_PAQUETE = 'ULTIMO_PAQUETE'
 TAMANIO_CHUNK = 4096
 
-ip = '192.168.180.4'
+ip = '192.168.146.128'
 #ip = '127.0.0.1'
 
 
@@ -18,7 +18,7 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         # Cambiar al puerto 20 en produccion
-        client_socket.connect((ip, 12345))
+        client_socket.connect((ip, 21))
         print(f"Conexión exitosa cliente {numero_cliente}")
         logging.info(f"Conexión hecha para cliente {numero_cliente}")
     except:

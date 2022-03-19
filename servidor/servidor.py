@@ -12,11 +12,11 @@ from datetime import datetime
 import os
 from time import sleep
 
-ip = '192.168.180.4'
+ip = '192.168.146.128'
 #ip = '127.0.0.1'
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind((ip, 12345))
+server_socket.bind((ip, 21))
 server_socket.listen(25)
 TAMANIO_CHUNK = 4096
 

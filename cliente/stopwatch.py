@@ -8,7 +8,7 @@ def dar_duracion(start_time, end_time):
   sec = sec % 60
   hours = mins // 60
   mins = mins % 60
-  print("El tiempo de transferencia del archivo fue {0}h:{1}min:{2}sec".format(int(hours),int(mins),sec))
+  return "El tiempo de transferencia del archivo fue {0}h:{1}min:{2}sec".format(int(hours),int(mins),sec)
 
 def start():
     return time.time()
