@@ -1,8 +1,7 @@
-from multiprocessing.connection import wait
 import threading
 import logging
 from datetime import datetime
-from time import time, sleep
+from time import sleep
 from cliente import crear_conexion
 
 now = datetime.now()  # current date and time
