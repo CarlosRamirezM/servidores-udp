@@ -44,7 +44,7 @@ def process_thread(filename, client_socket, barrier, hash):
                         print('Último chunk')
                         break
                     client_socket.sendall(bytes_read)
-            sleep(1)
+            sleep(2)
             client_socket.send('DONE'.encode('utf-8'))
             print("Se mandó el DONE")
 
