@@ -1,6 +1,0 @@
-INFO:root:LOG INICIADO
-INFO:root:Conexión hecha para cliente 1
-INFO:root:Entrega exitosa                                   
- Se recibió el archivo: ./ArchivosRecibidos/Cliente1-Prueba1.txt de tamaño: 262144000 bytes                                   
- Recibido por el cliente 1                                   
- El tiempo de transferencia del archivo fue 0h:0min:11.415396451950073sec

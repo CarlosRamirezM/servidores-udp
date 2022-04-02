@@ -1,5 +1,0 @@
-INFO:root:LOG INICIADO SERVER
-INFO:root:Entrega exitosa                         
- Se envió el archivo: servidor/files/100.bin de tamaño: 104857600 bytes                         
- Enviado al cliente 1                         
- El tiempo de transferencia del archivo fue 0h:0min:5.318788051605225sec
