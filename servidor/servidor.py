@@ -1,4 +1,3 @@
-# Script del servidor UDP
 import stopwatch as sw
 import socket
 import threading
@@ -7,7 +6,7 @@ from datetime import datetime
 import os
 from time import sleep
 
-ip = '192.168.65.128'
+ip = '192.168.146.128'
 #ip = '127.0.0.1'
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -18,7 +17,7 @@ PAYLOAD = 50000
 def process_thread(filename, address, numClient):
     try:
 
-        print('Num. cliente', int(numClient)-1)
+        print('Num. cliente', numClient)
         request = server_socket.recvfrom(PAYLOAD)
         str_req = request[0].decode("utf-8")
         print(f"Recibido {str_req} del cliente")
@@ -41,12 +40,12 @@ def process_thread(filename, address, numClient):
             tamanio = os.path.getsize(filename)
             logging.info(f"Entrega exitosa \
                             \n Se envió el archivo: {filename} de tamaño: {tamanio} bytes \
-                            \n Enviado al cliente {int(numClient)-1} \
+                            \n Enviado al cliente {numClient} \
                             \n {sw.dar_duracion(ti,tf)}")
     except Exception as e:
         print(e)
         logging.info(f"Entrega no exitosa \
-                        \n Cliente {int(numClient)-1}")
+                        \n Cliente {numClient}")
 
 
 while True:
@@ -62,6 +61,7 @@ while True:
 
     for i in range(num_clients):
         print("Esperando conexiones")
+        sleep(0.5)
         numClient, addr = server_socket.recvfrom(PAYLOAD)
         print("client connected from", addr)
         cliente = threading.Thread(

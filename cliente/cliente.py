@@ -1,16 +1,13 @@
-# Script para el cliente
-
 import socket
 import logging
 import os
 import stopwatch as sw
-import hashlib
 from time import sleep
 
 LISTO = 'LISTO'
 PAYLOAD = 50000
 
-ip = '192.168.65.128'
+ip = '192.168.146.128'
 #ip = '127.0.0.1'
 
 server_address_port = (ip, 12345)
@@ -27,7 +24,7 @@ def crear_conexion(numero_cliente: int, cantidad_conexiones: int):
         print("Conexión no exitosa. Vuelva a intentarlo.")
     try:
         while True:
-            sleep(0.1)
+
             listo = 's'
 
             if listo == 's':
