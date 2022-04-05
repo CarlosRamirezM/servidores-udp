@@ -1,0 +1,51 @@
+INFO:root:LOG INICIADO
+INFO:root:Conexión hecha para cliente 1
+INFO:root:Conexión hecha para cliente 2
+INFO:root:Conexión hecha para cliente 3
+INFO:root:Conexión hecha para cliente 4
+INFO:root:Conexión hecha para cliente 5
+INFO:root:Conexión hecha para cliente 6
+INFO:root:Conexión hecha para cliente 7
+INFO:root:Conexión hecha para cliente 8
+INFO:root:Conexión hecha para cliente 9
+INFO:root:Conexión hecha para cliente 10
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente1-Prueba10.txt de tamaño: 104807600 bytes                                   
+ Recibido por el cliente 1                                   
+ El tiempo de transferencia del archivo fue 0h:0min:40.611835956573486sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente6-Prueba10.txt de tamaño: 103907600 bytes                                   
+ Recibido por el cliente 6                                   
+ El tiempo de transferencia del archivo fue 0h:0min:36.065449237823486sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente5-Prueba10.txt de tamaño: 103657600 bytes                                   
+ Recibido por el cliente 5                                   
+ El tiempo de transferencia del archivo fue 0h:0min:37.23358416557312sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente10-Prueba10.txt de tamaño: 102357600 bytes                                   
+ Recibido por el cliente 10                                   
+ El tiempo de transferencia del archivo fue 0h:0min:31.97857904434204sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente7-Prueba10.txt de tamaño: 103307600 bytes                                   
+ Recibido por el cliente 7                                   
+ El tiempo de transferencia del archivo fue 0h:0min:35.36645817756653sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente8-Prueba10.txt de tamaño: 103657600 bytes                                   
+ Recibido por el cliente 8                                   
+ El tiempo de transferencia del archivo fue 0h:0min:34.38498497009277sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente9-Prueba10.txt de tamaño: 104607600 bytes                                   
+ Recibido por el cliente 9                                   
+ El tiempo de transferencia del archivo fue 0h:0min:33.36510968208313sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente3-Prueba10.txt de tamaño: 103357600 bytes                                   
+ Recibido por el cliente 3                                   
+ El tiempo de transferencia del archivo fue 0h:0min:39.02688026428223sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente4-Prueba10.txt de tamaño: 104357600 bytes                                   
+ Recibido por el cliente 4                                   
+ El tiempo de transferencia del archivo fue 0h:0min:37.824957847595215sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente2-Prueba10.txt de tamaño: 104757600 bytes                                   
+ Recibido por el cliente 2                                   
+ El tiempo de transferencia del archivo fue 0h:0min:39.63830518722534sec

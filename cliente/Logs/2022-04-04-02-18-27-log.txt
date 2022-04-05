@@ -1,0 +1,26 @@
+INFO:root:LOG INICIADO
+INFO:root:Conexión hecha para cliente 1
+INFO:root:Conexión hecha para cliente 2
+INFO:root:Conexión hecha para cliente 3
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente1-Prueba5.txt de tamaño: 1897152 bytes                                   
+ Recibido por el cliente 1                                   
+ El tiempo de transferencia del archivo fue 0h:0min:2.0420517921447754sec
+INFO:root:Conexión hecha para cliente 4
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente2-Prueba5.txt de tamaño: 1697152 bytes                                   
+ Recibido por el cliente 2                                   
+ El tiempo de transferencia del archivo fue 0h:0min:2.041454315185547sec
+INFO:root:Conexión hecha para cliente 5
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente3-Prueba5.txt de tamaño: 1797152 bytes                                   
+ Recibido por el cliente 3                                   
+ El tiempo de transferencia del archivo fue 0h:0min:2.0442867279052734sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente4-Prueba5.txt de tamaño: 1547152 bytes                                   
+ Recibido por el cliente 4                                   
+ El tiempo de transferencia del archivo fue 0h:0min:2.033566951751709sec
+INFO:root:Entrega exitosa                                   
+ Se recibió el archivo: ./ArchivosRecibidos/Cliente5-Prueba5.txt de tamaño: 1597152 bytes                                   
+ Recibido por el cliente 5                                   
+ El tiempo de transferencia del archivo fue 0h:0min:2.031818151473999sec

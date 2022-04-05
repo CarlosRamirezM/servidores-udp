@@ -1,0 +1,41 @@
+INFO:root:LOG INICIADO SERVER
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 2                             
+ El tiempo de transferencia del archivo fue 0h:0min:14.09688925743103sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 3                             
+ El tiempo de transferencia del archivo fue 0h:0min:15.67392086982727sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 4                             
+ El tiempo de transferencia del archivo fue 0h:0min:17.497343063354492sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 5                             
+ El tiempo de transferencia del archivo fue 0h:0min:16.510974884033203sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 6                             
+ El tiempo de transferencia del archivo fue 0h:0min:16.02350950241089sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 7                             
+ El tiempo de transferencia del archivo fue 0h:0min:15.607618570327759sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 8                             
+ El tiempo de transferencia del archivo fue 0h:0min:15.32718563079834sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 9                             
+ El tiempo de transferencia del archivo fue 0h:0min:14.368906497955322sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 11                             
+ El tiempo de transferencia del archivo fue 0h:0min:12.466763257980347sec
+INFO:root:Entrega exitosa                             
+ Se envió el archivo: ./files/250.bin de tamaño: 262144000 bytes                             
+ Enviado al cliente 10                             
+ El tiempo de transferencia del archivo fue 0h:0min:13.698570966720581sec
